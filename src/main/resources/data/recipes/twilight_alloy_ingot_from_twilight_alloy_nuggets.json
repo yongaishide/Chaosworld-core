@@ -1,0 +1,17 @@
+﻿{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        { "item": "chaosworld:nugget_twilight_alloy" },
+        { "item": "chaosworld:nugget_twilight_alloy" },
+        { "item": "chaosworld:nugget_twilight_alloy" },
+        { "item": "chaosworld:nugget_twilight_alloy" },
+        { "item": "chaosworld:nugget_twilight_alloy" },
+        { "item": "chaosworld:nugget_twilight_alloy" },
+        { "item": "chaosworld:nugget_twilight_alloy" },
+        { "item": "chaosworld:nugget_twilight_alloy" },
+        { "item": "chaosworld:nugget_twilight_alloy" }
+    ],
+    "result": {
+        "item": "chaosworld:ingot_twilight_alloy"
+    }
+}

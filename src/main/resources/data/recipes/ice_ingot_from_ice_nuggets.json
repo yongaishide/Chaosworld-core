@@ -1,0 +1,17 @@
+﻿{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        { "item": "chaosworld:nugget_ice" },
+        { "item": "chaosworld:nugget_ice" },
+        { "item": "chaosworld:nugget_ice" },
+        { "item": "chaosworld:nugget_ice" },
+        { "item": "chaosworld:nugget_ice" },
+        { "item": "chaosworld:nugget_ice" },
+        { "item": "chaosworld:nugget_ice" },
+        { "item": "chaosworld:nugget_ice" },
+        { "item": "chaosworld:nugget_ice" }
+    ],
+    "result": {
+        "item": "chaosworld:ingot_ice"
+    }
+}

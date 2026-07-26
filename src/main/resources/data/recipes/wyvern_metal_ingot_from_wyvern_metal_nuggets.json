@@ -1,0 +1,17 @@
+﻿{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        { "item": "chaosworld:nugget_wyvern_metal" },
+        { "item": "chaosworld:nugget_wyvern_metal" },
+        { "item": "chaosworld:nugget_wyvern_metal" },
+        { "item": "chaosworld:nugget_wyvern_metal" },
+        { "item": "chaosworld:nugget_wyvern_metal" },
+        { "item": "chaosworld:nugget_wyvern_metal" },
+        { "item": "chaosworld:nugget_wyvern_metal" },
+        { "item": "chaosworld:nugget_wyvern_metal" },
+        { "item": "chaosworld:nugget_wyvern_metal" }
+    ],
+    "result": {
+        "item": "chaosworld:ingot_wyvern_metal"
+    }
+}

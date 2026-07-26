@@ -1,0 +1,17 @@
+﻿{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        { "item": "chaosworld:nugget_quantum" },
+        { "item": "chaosworld:nugget_quantum" },
+        { "item": "chaosworld:nugget_quantum" },
+        { "item": "chaosworld:nugget_quantum" },
+        { "item": "chaosworld:nugget_quantum" },
+        { "item": "chaosworld:nugget_quantum" },
+        { "item": "chaosworld:nugget_quantum" },
+        { "item": "chaosworld:nugget_quantum" },
+        { "item": "chaosworld:nugget_quantum" }
+    ],
+    "result": {
+        "item": "chaosworld:ingot_quantum"
+    }
+}

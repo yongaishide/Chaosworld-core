@@ -1,0 +1,12 @@
+﻿{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "chaosworld:quantum_block"
+        }
+    ],
+    "result": {
+        "item": "chaosworld:ingot_quantum",
+        "count": 9
+    }
+}

@@ -1,0 +1,25 @@
+﻿{
+    "values":  [
+                   "chaosworld:chaotic_metal_dust",
+                   "chaosworld:draconic_metal_dust",
+                   "chaosworld:dust_atmium",
+                   "chaosworld:dust_chaotic_metal",
+                   "chaosworld:dust_draconic_metal",
+                   "chaosworld:dust_ice",
+                   "chaosworld:dust_lich",
+                   "chaosworld:dust_quantum",
+                   "chaosworld:dust_stainless_steel",
+                   "chaosworld:dust_tech_1",
+                   "chaosworld:dust_tech_2",
+                   "chaosworld:dust_tech_3",
+                   "chaosworld:dust_tech_4",
+                   "chaosworld:dust_tech_5",
+                   "chaosworld:dust_tech_6",
+                   "chaosworld:dust_tech_7",
+                   "chaosworld:dust_tech_8",
+                   "chaosworld:dust_tech_9",
+                   "chaosworld:dust_twilight_alloy",
+                   "chaosworld:dust_wyvern_metal",
+                   "chaosworld:wyvern_metal_dust"
+               ]
+}

@@ -1,0 +1,11 @@
+﻿{
+    "type": "minecraft:blasting",
+    "category": "misc",
+    "cookingtime": 100,
+    "experience": 0.7,
+    "group": "lich_ingot",
+    "ingredient": {
+        "item": "chaosworld:dust_lich"
+    },
+    "result": "chaosworld:ingot_lich"
+}

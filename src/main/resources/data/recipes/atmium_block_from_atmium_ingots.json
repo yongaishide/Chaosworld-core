@@ -1,0 +1,16 @@
+﻿{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "chaosworld:ingot_atmium"
+        }
+    },
+    "result": {
+        "item": "chaosworld:atmium_block"
+    }
+}

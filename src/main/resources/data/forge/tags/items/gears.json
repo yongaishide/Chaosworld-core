@@ -1,0 +1,25 @@
+﻿{
+    "values":  [
+                   "chaosworld:chaotic_metal_gear",
+                   "chaosworld:draconic_metal_gear",
+                   "chaosworld:gear_atmium",
+                   "chaosworld:gear_chaotic_metal",
+                   "chaosworld:gear_draconic_metal",
+                   "chaosworld:gear_ice",
+                   "chaosworld:gear_lich",
+                   "chaosworld:gear_quantum",
+                   "chaosworld:gear_stainless_steel",
+                   "chaosworld:gear_tech_1",
+                   "chaosworld:gear_tech_2",
+                   "chaosworld:gear_tech_3",
+                   "chaosworld:gear_tech_4",
+                   "chaosworld:gear_tech_5",
+                   "chaosworld:gear_tech_6",
+                   "chaosworld:gear_tech_7",
+                   "chaosworld:gear_tech_8",
+                   "chaosworld:gear_tech_9",
+                   "chaosworld:gear_twilight_alloy",
+                   "chaosworld:gear_wyvern_metal",
+                   "chaosworld:wyvern_metal_gear"
+               ]
+}

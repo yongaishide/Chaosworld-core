@@ -1,0 +1,25 @@
+﻿{
+    "values":  [
+                   "chaosworld:chaotic_metal_nugget",
+                   "chaosworld:draconic_metal_nugget",
+                   "chaosworld:nugget_atmium",
+                   "chaosworld:nugget_chaotic_metal",
+                   "chaosworld:nugget_draconic_metal",
+                   "chaosworld:nugget_ice",
+                   "chaosworld:nugget_lich",
+                   "chaosworld:nugget_quantum",
+                   "chaosworld:nugget_stainless_steel",
+                   "chaosworld:nugget_tech_1",
+                   "chaosworld:nugget_tech_2",
+                   "chaosworld:nugget_tech_3",
+                   "chaosworld:nugget_tech_4",
+                   "chaosworld:nugget_tech_5",
+                   "chaosworld:nugget_tech_6",
+                   "chaosworld:nugget_tech_7",
+                   "chaosworld:nugget_tech_8",
+                   "chaosworld:nugget_tech_9",
+                   "chaosworld:nugget_twilight_alloy",
+                   "chaosworld:nugget_wyvern_metal",
+                   "chaosworld:wyvern_metal_nugget"
+               ]
+}

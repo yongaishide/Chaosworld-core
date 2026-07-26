@@ -1,0 +1,12 @@
+﻿{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "chaosworld:ingot_lich"
+        }
+    ],
+    "result": {
+        "item": "chaosworld:nugget_lich",
+        "count": 9
+    }
+}

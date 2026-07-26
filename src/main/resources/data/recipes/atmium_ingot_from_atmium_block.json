@@ -1,0 +1,12 @@
+﻿{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "chaosworld:atmium_block"
+        }
+    ],
+    "result": {
+        "item": "chaosworld:ingot_atmium",
+        "count": 9
+    }
+}

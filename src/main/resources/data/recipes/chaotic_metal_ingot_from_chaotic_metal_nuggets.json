@@ -1,0 +1,17 @@
+﻿{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        { "item": "chaosworld:nugget_chaotic_metal" },
+        { "item": "chaosworld:nugget_chaotic_metal" },
+        { "item": "chaosworld:nugget_chaotic_metal" },
+        { "item": "chaosworld:nugget_chaotic_metal" },
+        { "item": "chaosworld:nugget_chaotic_metal" },
+        { "item": "chaosworld:nugget_chaotic_metal" },
+        { "item": "chaosworld:nugget_chaotic_metal" },
+        { "item": "chaosworld:nugget_chaotic_metal" },
+        { "item": "chaosworld:nugget_chaotic_metal" }
+    ],
+    "result": {
+        "item": "chaosworld:ingot_chaotic_metal"
+    }
+}

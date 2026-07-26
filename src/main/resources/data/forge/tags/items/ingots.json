@@ -1,0 +1,28 @@
+﻿{
+    "values":  [
+                   "chaosworld:atmium_ingot",
+                   "chaosworld:chaotic_metal_ingot",
+                   "chaosworld:draconic_metal_ingot",
+                   "chaosworld:ingot_atmium",
+                   "chaosworld:ingot_chaotic_metal",
+                   "chaosworld:ingot_draconic_metal",
+                   "chaosworld:ingot_ice",
+                   "chaosworld:ingot_lich",
+                   "chaosworld:ingot_quantum",
+                   "chaosworld:ingot_stainless_steel",
+                   "chaosworld:ingot_tech_1",
+                   "chaosworld:ingot_tech_2",
+                   "chaosworld:ingot_tech_3",
+                   "chaosworld:ingot_tech_4",
+                   "chaosworld:ingot_tech_5",
+                   "chaosworld:ingot_tech_6",
+                   "chaosworld:ingot_tech_7",
+                   "chaosworld:ingot_tech_8",
+                   "chaosworld:ingot_tech_9",
+                   "chaosworld:ingot_twilight_alloy",
+                   "chaosworld:ingot_wyvern_metal",
+                   "chaosworld:quantum_ingot",
+                   "chaosworld:stainless_steel_ingot",
+                   "chaosworld:wyvern_metal_ingot"
+               ]
+}

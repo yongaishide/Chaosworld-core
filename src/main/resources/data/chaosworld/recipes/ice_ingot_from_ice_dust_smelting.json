@@ -1,0 +1,11 @@
+﻿{
+    "type": "minecraft:smelting",
+    "category": "misc",
+    "cookingtime": 200,
+    "experience": 0.7,
+    "group": "ice_ingot",
+    "ingredient": {
+        "item": "chaosworld:dust_ice"
+    },
+    "result": "chaosworld:ingot_ice"
+}

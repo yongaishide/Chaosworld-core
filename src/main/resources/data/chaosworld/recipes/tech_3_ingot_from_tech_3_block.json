@@ -1,0 +1,12 @@
+﻿{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "chaosworld:tech_3_block"
+        }
+    ],
+    "result": {
+        "item": "chaosworld:ingot_tech_3",
+        "count": 9
+    }
+}

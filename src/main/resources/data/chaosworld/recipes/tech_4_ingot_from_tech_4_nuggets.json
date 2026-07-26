@@ -1,0 +1,17 @@
+﻿{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        { "item": "chaosworld:nugget_tech_4" },
+        { "item": "chaosworld:nugget_tech_4" },
+        { "item": "chaosworld:nugget_tech_4" },
+        { "item": "chaosworld:nugget_tech_4" },
+        { "item": "chaosworld:nugget_tech_4" },
+        { "item": "chaosworld:nugget_tech_4" },
+        { "item": "chaosworld:nugget_tech_4" },
+        { "item": "chaosworld:nugget_tech_4" },
+        { "item": "chaosworld:nugget_tech_4" }
+    ],
+    "result": {
+        "item": "chaosworld:ingot_tech_4"
+    }
+}

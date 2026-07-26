@@ -1,0 +1,7 @@
+﻿{
+  "variants": {
+    "": {
+      "model": "chaosworld:block/lich_block"
+    }
+  }
+}

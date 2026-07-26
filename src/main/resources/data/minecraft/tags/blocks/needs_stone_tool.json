@@ -1,0 +1,22 @@
+﻿{
+    "values":  [
+                   "chaosworld:atmium_block",
+                   "chaosworld:chaotic_metal_block",
+                   "chaosworld:draconic_metal_block",
+                   "chaosworld:ice_block",
+                   "chaosworld:lich_block",
+                   "chaosworld:quantum_block",
+                   "chaosworld:stainless_steel_block",
+                   "chaosworld:tech_1_block",
+                   "chaosworld:tech_2_block",
+                   "chaosworld:tech_3_block",
+                   "chaosworld:tech_4_block",
+                   "chaosworld:tech_5_block",
+                   "chaosworld:tech_6_block",
+                   "chaosworld:tech_7_block",
+                   "chaosworld:tech_8_block",
+                   "chaosworld:tech_9_block",
+                   "chaosworld:twilight_alloy_block",
+                   "chaosworld:wyvern_metal_block"
+               ]
+}

@@ -1,0 +1,12 @@
+﻿{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "chaosworld:ingot_tech_2"
+        }
+    ],
+    "result": {
+        "item": "chaosworld:nugget_tech_2",
+        "count": 9
+    }
+}
