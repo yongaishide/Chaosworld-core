@@ -117,7 +117,6 @@ public class ChaosWorld {
     public static final DeferredHolder<Item, BaseItem> ADVANCED_INTEGRATED = ITEMS.register("advanced_integrated", () -> new BaseItem(new Item.Properties(), false));
     public static final DeferredHolder<Item, BaseItem> MAGIC_EMERALD_CRYSTAL = ITEMS.register("magic_emerald_crystal", () -> new BaseItem(new Item.Properties(), false));
 
-    @SuppressWarnings("null")
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CHAOSWORLD_TAB = CREATIVE_MODE_TABS.register("chaosworld", () -> CreativeModeTab.builder()
             .title((Component) Component.translatable("itemGroup.chaosworld"))
             .icon(() -> new ItemStack(CRYPTID_CORE.get()))
