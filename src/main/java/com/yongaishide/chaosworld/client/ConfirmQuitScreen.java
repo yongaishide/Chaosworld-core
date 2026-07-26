@@ -1,5 +1,7 @@
 package com.yongaishide.chaosworld.client;
 
+import javax.annotation.Nonnull;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
@@ -33,7 +35,7 @@ public class ConfirmQuitScreen extends Screen {
     }
 
     @Override
-    public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
+    public void render(@Nonnull GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
         renderBackground(guiGraphics, mouseX, mouseY, partialTick);
         guiGraphics.drawCenteredString(font, PROMPT, width / 2, height / 2 - 40, 0xFFFFFF);
         if (quitButton.isHoveredOrFocused()) {
