@@ -1,1 +1,1 @@
-﻿{"textures":{"layer0":"chaosworld:item/crystal_assembly"},"parent":"item/generated"}
+{"textures":{"layer0":"chaosworld_core:item/crystal_assembly"},"parent":"item/generated"}

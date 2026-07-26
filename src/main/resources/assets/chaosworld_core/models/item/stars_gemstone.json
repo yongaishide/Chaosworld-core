@@ -1,1 +1,1 @@
-﻿{"textures":{"layer0":"chaosworld:item/stars_gemstone"},"parent":"item/generated"}
+{"textures":{"layer0":"chaosworld_core:item/stars_gemstone"},"parent":"item/generated"}

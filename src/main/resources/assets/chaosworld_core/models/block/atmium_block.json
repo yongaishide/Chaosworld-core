@@ -1,1 +1,1 @@
-﻿{"parent": "chaosworld:block/tinted_block","textures":{"all":"chaosworld:block/metal_block"}}
+{"parent": "chaosworld_core:block/tinted_block","textures":{"all":"chaosworld_core:block/metal_block"}}

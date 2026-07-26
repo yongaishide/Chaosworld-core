@@ -1,7 +1,7 @@
-﻿{
+{
   "variants": {
     "": {
-      "model": "chaosworld:block/atmium_block"
+      "model": "chaosworld_core:block/atmium_block"
     }
   }
 }

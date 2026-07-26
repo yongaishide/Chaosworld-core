@@ -1,7 +1,7 @@
-﻿{
+{
   "variants": {
     "": {
-      "model": "chaosworld:block/quantum_block"
+      "model": "chaosworld_core:block/quantum_block"
     }
   }
 }

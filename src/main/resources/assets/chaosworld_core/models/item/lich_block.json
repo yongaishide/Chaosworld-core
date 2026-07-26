@@ -1,3 +1,3 @@
-﻿{
-  "parent": "chaosworld:block/lich_block"
+{
+  "parent": "chaosworld_core:block/lich_block"
 }

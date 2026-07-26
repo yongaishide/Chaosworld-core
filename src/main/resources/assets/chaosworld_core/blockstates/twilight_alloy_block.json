@@ -1,7 +1,7 @@
-﻿{
+{
   "variants": {
     "": {
-      "model": "chaosworld:block/twilight_alloy_block"
+      "model": "chaosworld_core:block/twilight_alloy_block"
     }
   }
 }

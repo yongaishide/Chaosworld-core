@@ -1,6 +1,7 @@
 package com.yongaishide.chaosworld.metal;
 
 import com.yongaishide.chaosworld.ChaosWorld;
+import com.yongaishide.chaosworld.Config;
 import com.yongaishide.chaosworld.item.BaseItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -10,7 +11,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -40,29 +40,25 @@ public class ModTech {
         {"rod", "\u68D2"},
     };
 
-    public static final Map<String, Integer> TECH_COLORS = new HashMap<>();
-    static {
-        TECH_COLORS.put("tech_1", 0xFFe07802);
-        TECH_COLORS.put("tech_2", 0xFF6c4646);
-        TECH_COLORS.put("tech_3", 0xFF032F34);
-        TECH_COLORS.put("tech_4", 0xFF03DE6D);
-        TECH_COLORS.put("tech_5", 0xFFf5f5f5);
-        TECH_COLORS.put("tech_6", 0xFFf5f5f5);
-        TECH_COLORS.put("tech_7", 0xFFf5f5f5);
-        TECH_COLORS.put("tech_8", 0xFFf5f5f5);
-        TECH_COLORS.put("tech_9", 0xFFf5f5f5);
-    }
-
     public static int getColorForItem(String path) {
+        String techKey = "";
         if (path.endsWith("_block")) {
-            String tech = path.substring(0, path.length() - 6);
-            return TECH_COLORS.getOrDefault(tech, 0xFFFFFFFF);
-        }
-        for (String[] tech : TECHS) {
-            if (path.endsWith("_" + tech[0])) {
-                return TECH_COLORS.getOrDefault(tech[0], 0xFFFFFFFF);
+            techKey = path.substring(0, path.length() - 6);
+        } else {
+            for (String[] tech : TECHS) {
+                if (path.endsWith("_" + tech[0])) {
+                    techKey = tech[0];
+                    break;
+                }
             }
         }
+        if (techKey.isEmpty()) return 0xFFFFFFFF;
+        try {
+            int idx = Integer.parseInt(techKey.substring(5)) - 1;
+            if (idx >= 0 && idx < Config.techColors.length) {
+                return Config.techColors[idx];
+            }
+        } catch (NumberFormatException ignored) {}
         return 0xFFFFFFFF;
     }
 

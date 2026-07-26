@@ -1,7 +1,7 @@
-﻿{
+{
   "variants": {
     "": {
-      "model": "chaosworld:block/chaotic_metal_block"
+      "model": "chaosworld_core:block/chaotic_metal_block"
     }
   }
 }

@@ -1,8 +1,8 @@
-# Chaos World（乱界）
+# Chaos World Core（乱界核心）
 
-**混沌之力，尽在掌握。**
+**ChaosWorld 整合包的核心模组，为整合包提供大量注册内容。**
 
-Chaos World 是一个 Minecraft NeoForge 模组，增加了大量新物品、金属、科技组件和魔法材料，让你体验从基础冶炼到量子科技的完整成长路线。
+Chaos World Core 是 ChaosWorld 整合包的核心模组，注册了大量物品、方块、金属系列、科技组件等，为整合包提供丰富的合成路线与游戏内容。所有物品均通过延迟注册（DeferredRegister）统一管理，支持动态配置。
 
 ---
 
@@ -14,29 +14,6 @@ Chaos World 是一个 Minecraft NeoForge 模组，增加了大量新物品、金
 - **自定义配置**：通过 `config/chaosworld_core.toml` 可配置物品列表
 - **退出确认界面**：防止误触关闭游戏
 
-## 运行环境
-
-- **Minecraft**: 1.21.1
-- **NeoForge**: 21.1.243+
-- **Java**: 21
-- **构建工具**: Gradle（含 NeoForge ModDev 插件 2.0.142）
-
-## 开发
-
-```bash
-# 构建
-./gradlew build
-
-# 运行客户端
-./gradlew runClient
-```
-
-构建产物位于 `build/libs/chaosworld_core-x.x.x.jar`。
-
-## 配置
-
-模组配置文件位于 `.minecraft/config/chaosworld_core.toml`，可自定义初始化时输出的物品列表。
-
 ## 许可
 
 本项目代码基于 MIT 许可证开源。
@@ -45,11 +22,11 @@ Chaos World 是一个 Minecraft NeoForge 模组，增加了大量新物品、金
 
 ---
 
-# Chaos World
+# Chaos World Core
 
-**Embrace the power of chaos.**
+**The core mod of the ChaosWorld modpack, registering a vast amount of content for the pack.**
 
-Chaos World is a Minecraft NeoForge mod that adds a vast array of new items, metals, tech components, and magical materials, guiding you from basic smelting to quantum technology.
+Chaos World Core is the central mod of the ChaosWorld modpack, providing a large registry of items, blocks, metal series, tech components, and more. It serves as the content foundation for the pack's crafting progression and gameplay. All registrations use DeferredRegister for consistency and support dynamic configuration.
 
 ## Features
 
@@ -58,29 +35,6 @@ Chaos World is a Minecraft NeoForge mod that adds a vast array of new items, met
 - **80+ Unique Items**: Crystal Cores, processors, integrated circuits, gemstones, catalysts, and more
 - **Custom Config**: Item list configurable via `config/chaosworld_core.toml`
 - **Quit Confirmation Screen**: Prevents accidental game closure
-
-## Requirements
-
-- **Minecraft**: 1.21.1
-- **NeoForge**: 21.1.243+
-- **Java**: 21
-- **Build Tool**: Gradle (with NeoForge ModDev plugin 2.0.142)
-
-## Development
-
-```bash
-# Build
-./gradlew build
-
-# Run client
-./gradlew runClient
-```
-
-Build artifacts are located at `build/libs/chaosworld_core-x.x.x.jar`.
-
-## Configuration
-
-The mod config file is at `.minecraft/config/chaosworld_core.toml`, allowing customization of the item list logged during initialization.
 
 ## License
 
