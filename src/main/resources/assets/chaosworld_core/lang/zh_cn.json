@@ -205,7 +205,5 @@
     "item.chaosworld_core.dust_tech_9": "九阶科技粉",
     "item.chaosworld_core.gear_tech_9": "九阶科技齿轮",
     "item.chaosworld_core.rod_tech_9": "九阶科技棒",
-    "block.chaosworld_core.tech_9_block": "九阶科技块",
-    "generator.chaosworld_core.void_world": "空岛世界",
-    "generator.chaosworld_core.void_world.description": "无中生有的空岛世界，主世界、下界、末地均为虚空，但保留原版结构生成。出生点拥有一棵橡木树。"
+    "block.chaosworld_core.tech_9_block": "九阶科技块"
 }
