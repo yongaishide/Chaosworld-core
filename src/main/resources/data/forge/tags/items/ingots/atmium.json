@@ -1,6 +1,6 @@
-﻿{
+{
     "values":  [
-                   "chaosworld:atmium_ingot",
-                   "chaosworld:ingot_atmium"
+                   "chaosworld-core:atmium_ingot",
+                   "chaosworld-core:ingot_atmium"
                ]
 }

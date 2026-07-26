@@ -1,6 +1,6 @@
-﻿{
+{
     "values":  [
-                   "chaosworld:ingot_stainless_steel",
-                   "chaosworld:stainless_steel_ingot"
+                   "chaosworld-core:ingot_stainless_steel",
+                   "chaosworld-core:stainless_steel_ingot"
                ]
 }

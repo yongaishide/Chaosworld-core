@@ -1,6 +1,6 @@
-﻿{
+{
     "values":  [
-                   "chaosworld:chaotic_metal_ingot",
-                   "chaosworld:ingot_chaotic_metal"
+                   "chaosworld-core:chaotic_metal_ingot",
+                   "chaosworld-core:ingot_chaotic_metal"
                ]
 }

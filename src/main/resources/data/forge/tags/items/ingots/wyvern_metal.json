@@ -1,6 +1,6 @@
-﻿{
+{
     "values":  [
-                   "chaosworld:ingot_wyvern_metal",
-                   "chaosworld:wyvern_metal_ingot"
+                   "chaosworld-core:ingot_wyvern_metal",
+                   "chaosworld-core:wyvern_metal_ingot"
                ]
 }

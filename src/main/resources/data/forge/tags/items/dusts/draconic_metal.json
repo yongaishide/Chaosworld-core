@@ -1,6 +1,6 @@
-﻿{
+{
     "values":  [
-                   "chaosworld:draconic_metal_dust",
-                   "chaosworld:dust_draconic_metal"
+                   "chaosworld-core:draconic_metal_dust",
+                   "chaosworld-core:dust_draconic_metal"
                ]
 }

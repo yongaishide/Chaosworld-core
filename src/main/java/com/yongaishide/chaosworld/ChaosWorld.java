@@ -30,7 +30,7 @@ import org.slf4j.Logger;
 
 @Mod(ChaosWorld.MODID)
 public class ChaosWorld {
-    public static final String MODID = "chaosworld";
+    public static final String MODID = "chaosworld-core";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);

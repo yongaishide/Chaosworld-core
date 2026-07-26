@@ -1,6 +1,6 @@
-﻿{
+{
     "values":  [
-                   "chaosworld:chaotic_metal_gear",
-                   "chaosworld:gear_chaotic_metal"
+                   "chaosworld-core:chaotic_metal_gear",
+                   "chaosworld-core:gear_chaotic_metal"
                ]
 }

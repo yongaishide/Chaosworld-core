@@ -1,22 +1,22 @@
-﻿{
+{
     "values":  [
-                   "chaosworld:plate_atmium",
-                   "chaosworld:plate_chaotic_metal",
-                   "chaosworld:plate_draconic_metal",
-                   "chaosworld:plate_ice",
-                   "chaosworld:plate_lich",
-                   "chaosworld:plate_quantum",
-                   "chaosworld:plate_stainless_steel",
-                   "chaosworld:plate_tech_1",
-                   "chaosworld:plate_tech_2",
-                   "chaosworld:plate_tech_3",
-                   "chaosworld:plate_tech_4",
-                   "chaosworld:plate_tech_5",
-                   "chaosworld:plate_tech_6",
-                   "chaosworld:plate_tech_7",
-                   "chaosworld:plate_tech_8",
-                   "chaosworld:plate_tech_9",
-                   "chaosworld:plate_twilight_alloy",
-                   "chaosworld:plate_wyvern_metal"
+                   "chaosworld-core:plate_atmium",
+                   "chaosworld-core:plate_chaotic_metal",
+                   "chaosworld-core:plate_draconic_metal",
+                   "chaosworld-core:plate_ice",
+                   "chaosworld-core:plate_lich",
+                   "chaosworld-core:plate_quantum",
+                   "chaosworld-core:plate_stainless_steel",
+                   "chaosworld-core:plate_tech_1",
+                   "chaosworld-core:plate_tech_2",
+                   "chaosworld-core:plate_tech_3",
+                   "chaosworld-core:plate_tech_4",
+                   "chaosworld-core:plate_tech_5",
+                   "chaosworld-core:plate_tech_6",
+                   "chaosworld-core:plate_tech_7",
+                   "chaosworld-core:plate_tech_8",
+                   "chaosworld-core:plate_tech_9",
+                   "chaosworld-core:plate_twilight_alloy",
+                   "chaosworld-core:plate_wyvern_metal"
                ]
 }

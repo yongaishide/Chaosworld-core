@@ -1,22 +1,22 @@
-﻿{
+{
     "values":  [
-                   "chaosworld:atmium_block",
-                   "chaosworld:chaotic_metal_block",
-                   "chaosworld:draconic_metal_block",
-                   "chaosworld:ice_block",
-                   "chaosworld:lich_block",
-                   "chaosworld:quantum_block",
-                   "chaosworld:stainless_steel_block",
-                   "chaosworld:tech_1_block",
-                   "chaosworld:tech_2_block",
-                   "chaosworld:tech_3_block",
-                   "chaosworld:tech_4_block",
-                   "chaosworld:tech_5_block",
-                   "chaosworld:tech_6_block",
-                   "chaosworld:tech_7_block",
-                   "chaosworld:tech_8_block",
-                   "chaosworld:tech_9_block",
-                   "chaosworld:twilight_alloy_block",
-                   "chaosworld:wyvern_metal_block"
+                   "chaosworld-core:atmium_block",
+                   "chaosworld-core:chaotic_metal_block",
+                   "chaosworld-core:draconic_metal_block",
+                   "chaosworld-core:ice_block",
+                   "chaosworld-core:lich_block",
+                   "chaosworld-core:quantum_block",
+                   "chaosworld-core:stainless_steel_block",
+                   "chaosworld-core:tech_1_block",
+                   "chaosworld-core:tech_2_block",
+                   "chaosworld-core:tech_3_block",
+                   "chaosworld-core:tech_4_block",
+                   "chaosworld-core:tech_5_block",
+                   "chaosworld-core:tech_6_block",
+                   "chaosworld-core:tech_7_block",
+                   "chaosworld-core:tech_8_block",
+                   "chaosworld-core:tech_9_block",
+                   "chaosworld-core:twilight_alloy_block",
+                   "chaosworld-core:wyvern_metal_block"
                ]
 }
