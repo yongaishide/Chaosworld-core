@@ -1,6 +1,6 @@
 {
     "values":  [
-                   "chaosworld-core:draconic_metal_ingot",
-                   "chaosworld-core:ingot_draconic_metal"
+                   "chaosworld_core:draconic_metal_ingot",
+                   "chaosworld_core:ingot_draconic_metal"
                ]
 }

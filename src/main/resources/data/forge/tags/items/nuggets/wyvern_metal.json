@@ -1,6 +1,6 @@
 {
     "values":  [
-                   "chaosworld-core:nugget_wyvern_metal",
-                   "chaosworld-core:wyvern_metal_nugget"
+                   "chaosworld_core:nugget_wyvern_metal",
+                   "chaosworld_core:wyvern_metal_nugget"
                ]
 }

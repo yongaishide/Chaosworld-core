@@ -1,6 +1,6 @@
 {
     "values":  [
-                   "chaosworld-core:draconic_metal_gear",
-                   "chaosworld-core:gear_draconic_metal"
+                   "chaosworld_core:draconic_metal_gear",
+                   "chaosworld_core:gear_draconic_metal"
                ]
 }

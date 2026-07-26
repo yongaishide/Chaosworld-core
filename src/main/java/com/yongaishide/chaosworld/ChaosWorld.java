@@ -8,7 +8,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -30,7 +29,7 @@ import org.slf4j.Logger;
 
 @Mod(ChaosWorld.MODID)
 public class ChaosWorld {
-    public static final String MODID = "chaosworld-core";
+    public static final String MODID = "chaosworld_core";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
@@ -72,9 +71,9 @@ public class ChaosWorld {
     public static final DeferredHolder<Item, BaseItem> MANA_CRYSTAL2 = ITEMS.register("mana_crystal2", () -> new BaseItem(new Item.Properties(), false));
     public static final DeferredHolder<Item, BaseItem> MANA_CRYSTAL3 = ITEMS.register("mana_crystal3", () -> new BaseItem(new Item.Properties(), false));
     public static final DeferredHolder<Item, BaseItem> FORGEPLATE = ITEMS.register("forgeplate", () -> new BaseItem(new Item.Properties(), false));
-    public static final DeferredHolder<Item, BaseItem> FURANCE1 = ITEMS.register("furance1", () -> new BaseItem(new Item.Properties(), false));
-    public static final DeferredHolder<Item, BaseItem> FURANCE2 = ITEMS.register("furance2", () -> new BaseItem(new Item.Properties(), false));
-    public static final DeferredHolder<Item, BaseItem> FURANCE3 = ITEMS.register("furance3", () -> new BaseItem(new Item.Properties(), false));
+    public static final DeferredHolder<Item, BaseItem> FURNACE1 = ITEMS.register("furnace1", () -> new BaseItem(new Item.Properties(), false));
+    public static final DeferredHolder<Item, BaseItem> FURNACE2 = ITEMS.register("furnace2", () -> new BaseItem(new Item.Properties(), false));
+    public static final DeferredHolder<Item, BaseItem> FURNACE3 = ITEMS.register("furnace3", () -> new BaseItem(new Item.Properties(), false));
     public static final DeferredHolder<Item, BaseItem> CRYSTAL_ASSEMBLY = ITEMS.register("crystal_assembly", () -> new BaseItem(new Item.Properties(), false));
     public static final DeferredHolder<Item, BaseItem> CRYSTAL_COMPUTER = ITEMS.register("crystal_computer", () -> new BaseItem(new Item.Properties(), false));
     public static final DeferredHolder<Item, BaseItem> CRYSTAL_MAINFRAME = ITEMS.register("crystal_mainframe", () -> new BaseItem(new Item.Properties(), false));
@@ -100,7 +99,7 @@ public class ChaosWorld {
     public static final DeferredHolder<Item, BaseItem> NANO_MAINFRAME = ITEMS.register("nano_mainframe", () -> new BaseItem(new Item.Properties(), false));
     public static final DeferredHolder<Item, BaseItem> NANO_PROCESSOR = ITEMS.register("nano_processor", () -> new BaseItem(new Item.Properties(), false));
     public static final DeferredHolder<Item, BaseItem> CENTRAL_PROCESSING = ITEMS.register("central_processing", () -> new BaseItem(new Item.Properties(), false));
-    public static final DeferredHolder<Item, BaseItem> CHARGINGMAGICEMERALDCRYSTAL = ITEMS.register("chargingmagicemeraldcrystal", () -> new BaseItem(new Item.Properties(), true));
+    public static final DeferredHolder<Item, BaseItem> CHARGING_MAGIC_EMERALD_CRYSTAL = ITEMS.register("charging_magic_emerald_crystal", () -> new BaseItem(new Item.Properties(), true));
     public static final DeferredHolder<Item, BaseItem> CIRCUIT_PROCESSOR = ITEMS.register("circuit_processor", () -> new BaseItem(new Item.Properties(), false));
     public static final DeferredHolder<Item, BaseItem> CRYSTAL = ITEMS.register("crystal", () -> new BaseItem(new Item.Properties(), false));
     public static final DeferredHolder<Item, BaseItem> CRYSTAL_CHIP = ITEMS.register("crystal_chip", () -> new BaseItem(new Item.Properties(), false));
@@ -117,10 +116,11 @@ public class ChaosWorld {
     public static final DeferredHolder<Item, BaseItem> QUANTUM_INGOT = ITEMS.register("quantum_ingot", () -> new BaseItem(new Item.Properties(), false));
     public static final DeferredHolder<Item, BaseItem> BASIC_INTEGRATED = ITEMS.register("basic_integrated", () -> new BaseItem(new Item.Properties(), false));
     public static final DeferredHolder<Item, BaseItem> ADVANCED_INTEGRATED = ITEMS.register("advanced_integrated", () -> new BaseItem(new Item.Properties(), false));
-    public static final DeferredHolder<Item, BaseItem> MAGIC_EMERALD_CRYSTAL = ITEMS.register("magicemeraldcrystal", () -> new BaseItem(new Item.Properties(), false));
+    public static final DeferredHolder<Item, BaseItem> MAGIC_EMERALD_CRYSTAL = ITEMS.register("magic_emerald_crystal", () -> new BaseItem(new Item.Properties(), false));
 
+    @SuppressWarnings("null")
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CHAOSWORLD_TAB = CREATIVE_MODE_TABS.register("chaosworld", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup.chaosworld"))
+            .title((Component) Component.translatable("itemGroup.chaosworld"))
             .icon(() -> new ItemStack(CRYPTID_CORE.get()))
             .displayItems((parameters, output) -> {
                 output.accept(CRYPTID_CORE.get());
@@ -157,9 +157,9 @@ public class ChaosWorld {
                 output.accept(MANA_CRYSTAL2.get());
                 output.accept(MANA_CRYSTAL3.get());
                 output.accept(FORGEPLATE.get());
-                output.accept(FURANCE1.get());
-                output.accept(FURANCE2.get());
-                output.accept(FURANCE3.get());
+                output.accept(FURNACE1.get());
+                output.accept(FURNACE2.get());
+                output.accept(FURNACE3.get());
                 output.accept(CRYSTAL_ASSEMBLY.get());
                 output.accept(CRYSTAL_COMPUTER.get());
                 output.accept(CRYSTAL_MAINFRAME.get());
@@ -185,7 +185,7 @@ public class ChaosWorld {
                 output.accept(NANO_MAINFRAME.get());
                 output.accept(NANO_PROCESSOR.get());
                 output.accept(CENTRAL_PROCESSING.get());
-                output.accept(CHARGINGMAGICEMERALDCRYSTAL.get());
+                output.accept(CHARGING_MAGIC_EMERALD_CRYSTAL.get());
                 output.accept(CIRCUIT_PROCESSOR.get());
                 output.accept(CRYSTAL.get());
                 output.accept(CRYSTAL_CHIP.get());

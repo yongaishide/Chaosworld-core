@@ -1,6 +1,6 @@
 {
     "values":  [
-                   "chaosworld-core:ingot_quantum",
-                   "chaosworld-core:quantum_ingot"
+                   "chaosworld_core:ingot_quantum",
+                   "chaosworld_core:quantum_ingot"
                ]
 }

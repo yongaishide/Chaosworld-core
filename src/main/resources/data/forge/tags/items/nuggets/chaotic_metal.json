@@ -1,6 +1,6 @@
 {
     "values":  [
-                   "chaosworld-core:chaotic_metal_nugget",
-                   "chaosworld-core:nugget_chaotic_metal"
+                   "chaosworld_core:chaotic_metal_nugget",
+                   "chaosworld_core:nugget_chaotic_metal"
                ]
 }
