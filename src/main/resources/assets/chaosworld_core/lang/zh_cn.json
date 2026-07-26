@@ -205,5 +205,10 @@
     "item.chaosworld_core.dust_tech_9": "九阶科技粉",
     "item.chaosworld_core.gear_tech_9": "九阶科技齿轮",
     "item.chaosworld_core.rod_tech_9": "九阶科技棒",
-    "block.chaosworld_core.tech_9_block": "九阶科技块"
+    "block.chaosworld_core.tech_9_block": "九阶科技块",
+    "key.chaosworld_core.copy_item_id": "复制物品ID",
+    "key.chaosworld_core.copy_recipe_id": "复制配方ID",
+    "key.chaosworld_core.copy_recipe_json": "复制配方JSON",
+    "key.chaosworld_core.show_item_info": "显示物品信息",
+    "key.categories.chaosworld_core": "乱界核心"
 }

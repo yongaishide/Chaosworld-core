@@ -3,11 +3,19 @@ package com.yongaishide.chaosworld;
 import com.yongaishide.chaosworld.item.BaseItem;
 import com.yongaishide.chaosworld.metal.ModMetals;
 import com.yongaishide.chaosworld.metal.ModTech;
+import com.google.gson.JsonParser;
+import com.google.gson.stream.JsonReader;
+import java.util.List;
+import com.mojang.blaze3d.platform.InputConstants;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -21,14 +29,45 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
+import net.neoforged.neoforge.client.event.ScreenEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 import org.slf4j.Logger;
 
 @Mod(ChaosWorld.MODID)
 public class ChaosWorld {
     public static final String MODID = "chaosworld_core";
+    public static final String KEY_CATEGORY = "key.categories.chaosworld_core";
+    public static final KeyMapping COPY_ITEM_ID_KEY = new KeyMapping(
+        "key.chaosworld_core.copy_item_id",
+        InputConstants.Type.KEYSYM,
+        -1,
+        KEY_CATEGORY
+    );
+    public static final KeyMapping COPY_RECIPE_ID_KEY = new KeyMapping(
+        "key.chaosworld_core.copy_recipe_id",
+        InputConstants.Type.KEYSYM,
+        -1,
+        KEY_CATEGORY
+    );
+    public static final KeyMapping COPY_RECIPE_JSON_KEY = new KeyMapping(
+        "key.chaosworld_core.copy_recipe_json",
+        InputConstants.Type.KEYSYM,
+        -1,
+        KEY_CATEGORY
+    );
+    public static final KeyMapping SHOW_ITEM_INFO_KEY = new KeyMapping(
+        "key.chaosworld_core.show_item_info",
+        InputConstants.Type.KEYSYM,
+        -1,
+        KEY_CATEGORY
+    );
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
@@ -236,7 +275,16 @@ public class ChaosWorld {
     @EventBusSubscriber(modid = MODID, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
+        public static void onRegisterKeyMappings(RegisterKeyMappingsEvent event) {
+            event.register(COPY_ITEM_ID_KEY);
+            event.register(COPY_RECIPE_ID_KEY);
+            event.register(COPY_RECIPE_JSON_KEY);
+            event.register(SHOW_ITEM_INFO_KEY);
+        }
+
+        @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            NeoForge.EVENT_BUS.register(ClientCopyHandler.class);
             event.enqueueWork(() -> {
                 var window = Minecraft.getInstance().getWindow().getWindow();
                 org.lwjgl.glfw.GLFW.glfwSetWindowCloseCallback(window, handle -> {
@@ -278,6 +326,143 @@ public class ChaosWorld {
                 String path = BuiltInRegistries.BLOCK.getKey(state.getBlock()).getPath();
                 return getItemColor(path);
             }, blocks.toArray(new Block[0]));
+        }
+    }
+
+    private static ItemStack hoveredStack = ItemStack.EMPTY;
+    private static int hoverTimeout = 0;
+
+    public static class ClientCopyHandler {
+        @SubscribeEvent
+        public static void onTooltip(ItemTooltipEvent event) {
+            if (!event.getItemStack().isEmpty()) {
+                hoveredStack = event.getItemStack();
+                hoverTimeout = 3;
+            }
+        }
+
+        @SubscribeEvent
+        public static void onClientTick(ClientTickEvent.Pre event) {
+            if (hoverTimeout > 0) {
+                hoverTimeout--;
+                if (hoverTimeout == 0) {
+                    hoveredStack = ItemStack.EMPTY;
+                }
+            }
+        }
+
+        @SubscribeEvent
+        public static void onKeyPressed(ScreenEvent.KeyPressed.Pre event) {
+            var key = InputConstants.getKey(event.getKeyCode(), event.getScanCode());
+            Minecraft mc = Minecraft.getInstance();
+
+            if (COPY_ITEM_ID_KEY.isActiveAndMatches(key) && !hoveredStack.isEmpty()) {
+                String id = BuiltInRegistries.ITEM.getKey(hoveredStack.getItem()).toString();
+                String quoted = "\"" + id + "\"";
+                mc.keyboardHandler.setClipboard(quoted);
+                if (mc.player != null) {
+                    mc.player.displayClientMessage(Component.literal("§a已复制: " + quoted), false);
+                }
+                LOGGER.info("Copied item ID: {}", id);
+            } else if (COPY_RECIPE_ID_KEY.isActiveAndMatches(key)) {
+                handleCopyRecipeId(mc);
+            } else if (COPY_RECIPE_JSON_KEY.isActiveAndMatches(key)) {
+                handleCopyRecipeJson(mc);
+            } else if (SHOW_ITEM_INFO_KEY.isActiveAndMatches(key) && !hoveredStack.isEmpty()) {
+                handleShowItemInfo(mc);
+            }
+        }
+
+        private static ResourceLocation getCurrentRecipeId(Minecraft mc) {
+            Screen screen = mc.screen;
+            if (screen == null) return null;
+            try {
+                Class<?> recipeScreenClass = Class.forName("dev.emi.emi.screen.RecipeScreen");
+                if (!recipeScreenClass.isInstance(screen)) return null;
+
+                var currentPageField = recipeScreenClass.getDeclaredField("currentPage");
+                currentPageField.setAccessible(true);
+                List<?> widgetGroups = (List<?>) currentPageField.get(screen);
+                if (widgetGroups == null || widgetGroups.isEmpty()) return null;
+
+                Object wg = widgetGroups.getFirst();
+                var recipeField = wg.getClass().getField("recipe");
+                Object recipe = recipeField.get(wg);
+                if (recipe == null) return null;
+
+                var getId = recipe.getClass().getMethod("getId");
+                return (ResourceLocation) getId.invoke(recipe);
+            } catch (Exception e) {
+                LOGGER.error("Failed to get current recipe ID", e);
+                return null;
+            }
+        }
+
+        private static void handleCopyRecipeId(Minecraft mc) {
+            ResourceLocation recipeId = getCurrentRecipeId(mc);
+            if (recipeId == null) return;
+            String id = recipeId.toString();
+            mc.keyboardHandler.setClipboard(id);
+            if (mc.player != null) {
+                mc.player.displayClientMessage(Component.literal("§a已复制配方ID: " + id), false);
+            }
+            LOGGER.info("Copied recipe ID: {}", id);
+        }
+
+        private static void handleCopyRecipeJson(Minecraft mc) {
+            ResourceLocation recipeId = getCurrentRecipeId(mc);
+            if (recipeId == null) return;
+
+            MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
+            if (server == null) return;
+
+            try {
+                var resourcePath = ResourceLocation.fromNamespaceAndPath(
+                    recipeId.getNamespace(), "recipe/" + recipeId.getPath() + ".json");
+                var resourceOpt = server.getResourceManager().getResource(resourcePath);
+                if (resourceOpt.isEmpty()) return;
+
+                var reader = new JsonReader(resourceOpt.get().openAsReader());
+                reader.setLenient(true);
+                String json = JsonParser.parseReader(reader).toString();
+                mc.keyboardHandler.setClipboard(json);
+                if (mc.player != null) {
+                    mc.player.displayClientMessage(
+                        Component.literal("§a已复制配方JSON: " + recipeId), false);
+                }
+                LOGGER.info("Copied recipe JSON: {}", recipeId);
+            } catch (Exception e) {
+                LOGGER.error("Failed to copy recipe JSON", e);
+            }
+        }
+
+        private static void handleShowItemInfo(Minecraft mc) {
+            if (mc.player == null) return;
+            ItemStack stack = hoveredStack;
+            String id = BuiltInRegistries.ITEM.getKey(stack.getItem()).toString();
+            String translationKey = stack.getItem().getDescriptionId();
+            String itemClass = stack.getItem().getClass().getSimpleName();
+
+            mc.player.displayClientMessage(
+                Component.literal("§6=== Item Info ==="), false);
+            mc.player.displayClientMessage(
+                Component.literal("§eID: §f" + id), false);
+            mc.player.displayClientMessage(
+                Component.literal("§eTranslation Key: §f" + translationKey), false);
+            mc.player.displayClientMessage(
+                Component.literal("§eClass: §f" + itemClass), false);
+
+            var tags = stack.getTags().toList();
+            if (!tags.isEmpty()) {
+                mc.player.displayClientMessage(
+                    Component.literal("§eTags:"), false);
+                for (var tag : tags) {
+                    mc.player.displayClientMessage(
+                        Component.literal("  §7- §f" + tag.location()), false);
+                }
+            }
+
+            LOGGER.info("Showed item info for: {}", id);
         }
     }
 }

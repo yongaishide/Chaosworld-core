@@ -79,8 +79,7 @@
     "item.chaosworld_core.wyvern_metal_ingot": "Wyvern Metal Ingot",
     "item.chaosworld_core.wyvern_metal_nugget": "Wyvern Metal Nugget",
     "item.chaosworld_core.zeluosishuijing": "Zeluosishuijing",
-    "itemGroup.chaosworld": "Chaos World"
-},
+    "itemGroup.chaosworld": "Chaos World",
     "item.chaosworld_core.ingot_ice": "Ice Ingot",
     "item.chaosworld_core.nugget_ice": "Ice Nugget",
     "item.chaosworld_core.plate_ice": "Ice Plate",
@@ -143,8 +142,7 @@
     "block.chaosworld_core.wyvern_metal_block": "Wyvern Metal Block",
     "block.chaosworld_core.atmium_block": "Atmium Block",
     "block.chaosworld_core.quantum_block": "Quantum Block",
-    "block.chaosworld_core.stainless_steel_block": "Stainless Steel Block"
-},
+    "block.chaosworld_core.stainless_steel_block": "Stainless Steel Block",
     "item.chaosworld_core.ingot_tech_1": "Tech 1 Ingot",
     "item.chaosworld_core.nugget_tech_1": "Tech 1 Nugget",
     "item.chaosworld_core.plate_tech_1": "Tech 1 Plate",
@@ -209,5 +207,10 @@
     "item.chaosworld_core.rod_tech_9": "Tech 9 Rod",
     "block.chaosworld_core.tech_9_block": "Tech 9 Block",
     "generator.chaosworld_core.void_world": "Void World",
-    "generator.chaosworld_core.void_world.description": "A skyblock-style void world. Overworld, Nether and End are all void with structures intact. Spawn with an oak tree."
+    "generator.chaosworld_core.void_world.description": "A skyblock-style void world. Overworld, Nether and End are all void with structures intact. Spawn with an oak tree.",
+    "key.chaosworld_core.copy_item_id": "Copy Item ID",
+    "key.chaosworld_core.copy_recipe_id": "Copy Recipe ID",
+    "key.chaosworld_core.copy_recipe_json": "Copy Recipe JSON",
+    "key.chaosworld_core.show_item_info": "Show Item Info",
+    "key.categories.chaosworld_core": "Chaos World Core"
 }
