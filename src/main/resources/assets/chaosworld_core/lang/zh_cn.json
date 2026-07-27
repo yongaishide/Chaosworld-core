@@ -206,6 +206,8 @@
     "item.chaosworld_core.gear_tech_9": "九阶科技齿轮",
     "item.chaosworld_core.rod_tech_9": "九阶科技棒",
     "block.chaosworld_core.tech_9_block": "九阶科技块",
+    "block.chaosworld_core.wireless_flux_energy_input_hatch": "无线通量能量输入仓",
+    "block.chaosworld_core.wireless_flux_energy_output_hatch": "无线通量能量输出仓",
     "key.chaosworld_core.copy_item_id": "复制物品ID",
     "key.chaosworld_core.copy_recipe_id": "复制配方ID",
     "key.chaosworld_core.copy_recipe_json": "复制配方JSON",

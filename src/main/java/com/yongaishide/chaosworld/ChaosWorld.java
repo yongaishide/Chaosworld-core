@@ -44,6 +44,12 @@ import org.slf4j.Logger;
 public class ChaosWorld {
     public static final String MODID = "chaosworld_core";
     public static final String KEY_CATEGORY = "key.categories.chaosworld_core";
+
+    private static IEventBus modEventBus;
+
+    public static IEventBus getModEventBus() {
+        return modEventBus;
+    }
     public static final KeyMapping COPY_ITEM_ID_KEY = new KeyMapping(
         "key.chaosworld_core.copy_item_id",
         InputConstants.Type.KEYSYM,
@@ -252,10 +258,13 @@ public class ChaosWorld {
                 for (var entry : ModTech.TECH_BLOCK_ITEMS.values()) {
                     output.accept(entry.get());
                 }
+                output.accept(com.yongaishide.chaosworld.wireless.ModWirelessContent.WIRELESS_FLUX_ENERGY_INPUT_HATCH_BLOCK_ITEM.get());
+                output.accept(com.yongaishide.chaosworld.wireless.ModWirelessContent.WIRELESS_FLUX_ENERGY_OUTPUT_HATCH_BLOCK_ITEM.get());
             })
             .build());
 
     public ChaosWorld(IEventBus modEventBus, ModContainer modContainer) {
+        ChaosWorld.modEventBus = modEventBus;
         modEventBus.addListener(this::commonSetup);
 
         BLOCKS.register(modEventBus);
@@ -264,6 +273,7 @@ public class ChaosWorld {
 
         ModMetals.register();
         ModTech.register();
+        com.yongaishide.chaosworld.wireless.ModWirelessContent.register();
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }

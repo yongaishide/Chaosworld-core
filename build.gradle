@@ -30,6 +30,13 @@ repositories {
     maven {url = "https://libraries.minecraft.net/"}
     maven {url = "https://neoforged.forgecdn.net/releases"}
     maven {url = "https://neoforged.forgecdn.net/mojang-meta"}
+
+    // For locally downloaded Flux Networks / MI jars
+    flatDir { dirs 'libs' }
+
+    maven { url = "https://cursemaven.com" }
+    maven { url = "https://maven.k-4u.nl" }
+    maven { url = "https://modmaven.dev/" }
 }
 
 base {
@@ -120,6 +127,8 @@ configurations {
 }
 
 dependencies {
+    // Local jars in libs/ (Flux Networks, MI, MoreFluxStorage, etc.)
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

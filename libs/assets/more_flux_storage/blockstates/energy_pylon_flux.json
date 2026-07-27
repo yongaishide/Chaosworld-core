@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "more_flux_storage:block/energy_pylon_flux"
+    }
+  }
+}
