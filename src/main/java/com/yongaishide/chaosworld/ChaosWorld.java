@@ -44,6 +44,12 @@ import org.slf4j.Logger;
 public class ChaosWorld {
     public static final String MODID = "chaosworld_core";
     public static final String KEY_CATEGORY = "key.categories.chaosworld_core";
+
+    private static IEventBus modEventBus;
+
+    public static IEventBus getModEventBus() {
+        return modEventBus;
+    }
     public static final KeyMapping COPY_ITEM_ID_KEY = new KeyMapping(
         "key.chaosworld_core.copy_item_id",
         InputConstants.Type.KEYSYM,

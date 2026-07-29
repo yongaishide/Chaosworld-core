@@ -206,6 +206,8 @@
     "item.chaosworld_core.gear_tech_9": "Tech 9 Gear",
     "item.chaosworld_core.rod_tech_9": "Tech 9 Rod",
     "block.chaosworld_core.tech_9_block": "Tech 9 Block",
+    "block.chaosworld_core.wireless_flux_energy_input_hatch": "Wireless Flux Energy Input Hatch",
+    "block.chaosworld_core.wireless_flux_energy_output_hatch": "Wireless Flux Energy Output Hatch",
     "generator.chaosworld_core.void_world": "Void World",
     "generator.chaosworld_core.void_world.description": "A skyblock-style void world. Overworld, Nether and End are all void with structures intact. Spawn with an oak tree.",
     "block.chaosworld_core.wireless_flux_energy_input_hatch": "Wireless Flux Energy Input Hatch",

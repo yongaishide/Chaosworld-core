@@ -13,6 +13,19 @@ Chaos World Core 是 ChaosWorld 整合包的核心模组，注册了大量物品
 - **80+ 独立物品**：水晶核心、处理器、集成电路、宝石、催化剂等
 - **自定义配置**：通过 `config/chaosworld_core.toml` 可配置物品列表
 - **退出确认界面**：防止误触关闭游戏
+- **无线 Flux 能量仓**（Wireless Flux Energy Hatch）：Modern Industrialization 多方块结构与 Flux Networks 的无线能量桥接
+
+### 无线 Flux 能量仓
+
+提供**输入仓**（`wireless_flux_energy_input_hatch`）和**输出仓**（`wireless_flux_energy_output_hatch`），可作为 MI 多方块的能量仓口使用。
+
+- 输入仓：直接从 Flux 网络抽取能量供给多方块
+- 输出仓：将多方块产生的能量发送到 Flux 网络
+- 右键打开 Flux GUI 配置网络
+- 机壳颜色跟随多方块控制器
+- 能量显示无上限，直接读取网络可用电量
+
+**依赖：** Modern Industrialization、Flux Networks、More Flux Storage、Grand Power
 
 ## 许可
 
@@ -35,6 +48,19 @@ Chaos World Core is the central mod of the ChaosWorld modpack, providing a large
 - **80+ Unique Items**: Crystal Cores, processors, integrated circuits, gemstones, catalysts, and more
 - **Custom Config**: Item list configurable via `config/chaosworld_core.toml`
 - **Quit Confirmation Screen**: Prevents accidental game closure
+- **Wireless Flux Energy Hatch**: Bridges Modern Industrialization multiblocks with Flux Networks for wireless energy transfer
+
+### Wireless Flux Energy Hatch
+
+Provides **input hatch** (`wireless_flux_energy_input_hatch`) and **output hatch** (`wireless_flux_energy_output_hatch`), usable as MI multiblock energy hatches.
+
+- Input hatch: directly pulls energy from the Flux network to power multiblocks
+- Output hatch: sends multiblock-generated energy to the Flux network
+- Right-click to open Flux GUI for network configuration
+- Casing color follows the multiblock controller
+- No energy capacity limit — reads network available energy directly
+
+**Dependencies:** Modern Industrialization, Flux Networks, More Flux Storage, Grand Power
 
 ## License
 
