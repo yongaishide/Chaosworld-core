@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "chaosworld_core:block/wireless_flux_energy_input_hatch"
+    }
+  }
+}

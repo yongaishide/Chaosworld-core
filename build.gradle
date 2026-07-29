@@ -124,6 +124,10 @@ dependencies {
     compileOnly files('run/mods/projectexpansion-1.21.1-1.0.6.jar')
     compileOnly files('run/mods/appliedenergistics2-19.2.17.jar')
     compileOnly files('run/mods/ExtendedAE-1.21-2.2.35-neoforge.jar')
+    compileOnly files('run/mods/FluxNetworks-1.21.1-8.0.0.jar')
+    compileOnly files('run/mods/more_flux_storage-1.21.1-1.0.3.jar')
+    compileOnly files('run/mods/Modern-Industrialization-2.5.5.jar')
+    compileOnly files('run/mods/GrandPower-3.0.0.jar')
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

@@ -74,6 +74,9 @@ public class ChaosWorld {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
+    private static IEventBus modEventBus;
+    public static IEventBus getModEventBus() { return modEventBus; }
+
     // Manual items
     public static final DeferredHolder<Item, BaseItem> CRYPTID_CORE = ITEMS.register("cryptid_core", () -> new BaseItem(new Item.Properties(), false));
     public static final DeferredHolder<Item, BaseItem> STARLIGHT_GEMSTONE = ITEMS.register("starlight_gemstone", () -> new BaseItem(new Item.Properties(), false));
@@ -252,10 +255,13 @@ public class ChaosWorld {
                 for (var entry : ModTech.TECH_BLOCK_ITEMS.values()) {
                     output.accept(entry.get());
                 }
+                output.accept(com.yongaishide.chaosworld.wireless.ModWirelessContent.WIRELESS_FLUX_ENERGY_INPUT_HATCH_BLOCK_ITEM.get());
+                output.accept(com.yongaishide.chaosworld.wireless.ModWirelessContent.WIRELESS_FLUX_ENERGY_OUTPUT_HATCH_BLOCK_ITEM.get());
             })
             .build());
 
     public ChaosWorld(IEventBus modEventBus, ModContainer modContainer) {
+        ChaosWorld.modEventBus = modEventBus;
         modEventBus.addListener(this::commonSetup);
 
         BLOCKS.register(modEventBus);
@@ -264,6 +270,7 @@ public class ChaosWorld {
 
         ModMetals.register();
         ModTech.register();
+        com.yongaishide.chaosworld.wireless.ModWirelessContent.register();
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
