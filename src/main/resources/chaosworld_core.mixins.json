@@ -2,7 +2,20 @@
   "required": true,
   "package": "com.yongaishide.chaosworld.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
+  "mixins": [
+    "projectexpansion.TransmutationInterfaceItemHandlerMixin",
+    "projectexpansion.TransmutationInterfaceMEStorageMixin",
+    "ae2.ForgeExternalStorageStrategyMixin",
+    "ae2.SetAmountMixin",
+    "ae2.SetStockAmountMenuMixin",
+    "ae2.GenericStackInvMixin",
+    "ae2.GenericSlotCapacitiesMixin",
+    "ae2.StorageServiceMixin",
+    "ae2.TickRatesMixin",
+    "ae2.IOBusPartMixin",
+    "ae2.IOPortBlockEntityMixin",
+    "ae2.TileExIOPortMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },

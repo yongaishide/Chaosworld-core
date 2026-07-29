@@ -1,7 +1,7 @@
 {
     "values":  [
-                   "chaosworld_core:atmium_block",
-                   "chaosworld_core:chaotic_metal_block",
+                    "chaosworld_core:atmium_block",
+                    "chaosworld_core:chaotic_metal_block",
                    "chaosworld_core:draconic_metal_block",
                    "chaosworld_core:ice_block",
                    "chaosworld_core:lich_block",

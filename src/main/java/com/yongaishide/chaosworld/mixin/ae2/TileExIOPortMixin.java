@@ -9,6 +9,6 @@ public class TileExIOPortMixin {
 
     @ModifyConstant(method = "tickingRequest", constant = @Constant(longValue = 2048L), remap = false)
     private long chaosworld_exIOPortSpeed(long original) {
-        return 4000000L;
+        return Integer.MAX_VALUE;
     }
 }
